@@ -18,6 +18,7 @@ spec:
     blueGreen:
       activeService: {{ template "helm-guestbook.fullname" . }}
       previewService: {{ template "helm-guestbook.fullname" . }}-preview
+      scaleDownDelaySeconds: 120
   template:
     metadata:
       labels:
