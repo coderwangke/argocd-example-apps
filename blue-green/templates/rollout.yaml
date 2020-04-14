@@ -19,6 +19,8 @@ spec:
       activeService: {{ template "helm-guestbook.fullname" . }}
       previewService: {{ template "helm-guestbook.fullname" . }}-preview
       scaleDownDelaySeconds: 120
+      autoPromotionEnabled: false
+      autoPromotionSeconds: 120
   template:
     metadata:
       labels:
