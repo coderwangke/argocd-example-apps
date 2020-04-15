@@ -7,7 +7,7 @@ spec:
   gateways:
     - istio-rollout-gateway
   hosts:
-    - *
+    - "*"
   http:
     - name: primary
       route:
