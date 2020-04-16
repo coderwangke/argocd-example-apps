@@ -18,4 +18,5 @@ to explore ArgoCD and GitOps!
 | [sock-shop](sock-shop/) | A microservices demo app (https://microservices-demo.github.io) |
 | [plugins](plugins/) | Apps which demonstrate config management plugins usage |
 | [blue-green](blue-green/) | Demonstrates how to implement blue-green deployment using [Argo Rollouts](https://github.com/argoproj/argo-rollouts)
+| [canary](canary/) | Demonstrates how to implement canary deployment using [Argo Rollouts](https://github.com/argoproj/argo-rollouts)
 | [apps](apps/) | An app composed of other apps |
