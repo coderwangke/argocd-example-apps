@@ -1,5 +1,12 @@
 # This template demonstrates a steps template and how to control sequential vs. parallel steps.
-# In this example, the hello1 completes before the hello2a, and hello2b steps, which run in parallel.
+# 
+#   A
+#  / \
+# B   C
+#  \ /
+#   D
+#   |
+#   E
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
@@ -21,6 +28,14 @@ spec:
         template: whalesay
         arguments:
           parameters: [{name: message, value: "hello2b"}]
+    - - name: hello3
+        template: whalesay
+        arguments:
+          parameters: [{name: message, value: "hello1"}]
+    - - name: hello4
+        template: whalesay
+        arguments:
+          parameters: [{name: message, value: "hello1"}]
 
   - name: whalesay
     inputs:

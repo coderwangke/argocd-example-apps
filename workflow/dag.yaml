@@ -3,8 +3,8 @@
 #   A
 #  / \
 # B   C
-#  \ /
-#   D
+#  \ / \
+#   D   E
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
@@ -34,6 +34,11 @@ spec:
         template: echo
         arguments:
           parameters: [{name: message, value: D}]
+      - name: E
+        dependencies: [C]
+        template: echo
+        arguments:
+          parameters: [{name: message, value: E}]
 
   - name: echo
     inputs:
