@@ -6,7 +6,7 @@ spec:
   entrypoint: whalesay          # invoke the whalesay template
   templates:
   - name: whalesay              # name of the template
-    container:
+    container:                  # 
       image: docker/whalesay
       command: [cowsay]
       args: ["hello world"]
